@@ -1,0 +1,126 @@
+
+
+<!-- comments: command+/ on a line will comment it out
+
+Codepen.io for real time HTML + CSS + JS
+
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Name displayed on tab and links</title>
+  </head>
+  <body>
+
+  </body>
+</html>
+<!-- HTML5 boilerplate
+head- style sheets, scripts, JS files - all hidden
+-->
+<hr>
+<!-- hr is a page break with line across -->
+
+<h1>basic tags</h1>
+<ul>
+  <li><h1>header</h1></li>
+  <li><p>paragraph</p></li>
+  <li><strong>bolds text</strong></li>
+  <li><em>emphasized, structure as opposed to just italics <i>i</i></em></li>
+</ul>
+
+
+<h1>lists</h1>
+<ul>
+  <li>unordered list</li>
+</ul>
+
+<ol>
+  <li>ordered list</li>
+</ol>
+
+<div class="">
+  creates block/paragraph sections
+</div>
+
+<span>creates in-line sections</span>
+
+<hr>
+
+<h1>Attributes are Property + Value</h1>
+
+<a href="https://wwww.website.com">Text that shows as link</a>
+<!-- a = anchor tag, create links to other pages
+defaults to file protocol, if www.google.com will go to Desktop/www.google.com, need https://!!-->
+<a href="page2">Click to go to page 2</a>
+<!-- page2 is a html file he created, same directory as firstpage.html so will open it up bc relative path -->
+
+<link rel="stylesheet" href="/css/master.css">
+
+<img src="url of photo or dog.jpg if same directory" alt="">
+<!-- src=source very common attribute for files -->
+
+<hr>
+
+<h1>HTML tables</h1>
+
+<table border="1">
+  <!-- no one uses border in HTML, that's for CSS, this is just to demo -->
+  <!-- tr=table row -->
+  <tr>
+    <th>table/column header1</th>
+    <th>table/column header2</th>
+  </tr>
+  <tr>
+    <td>red</td>
+    <td>orange</td>
+  <!-- 1 row with 2 columns red and orange -->
+  </tr>
+</table>
+<!-- no difference in appearance from th and tr -->
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Breed</th>
+    </tr>
+    <tbody>
+      <tr>
+        <td>Rusty</td>
+        <td>2</td>
+        <td>Mutt</td>
+      </tr>
+        <td>Wyatt</td>
+        <td>13</td>
+        <td>Golden</td>
+    </tbody>
+  </thead>
+</table>
+
+<hr>
+<h1>Forms</h1>
+3 tags, form, input, and label
+
+<form class="" action="index.html" method="post">
+  Action = URL to send form data to
+  Method = type of HTTP request: GET, POST, etc
+</form>
+
+<input type="text" name="" value="">
+Type = text, date, color, file, checkbox, email, tons of types
+
+<label for=""></label>
+
+
+<button type="button" name="submit1"></button>
+<input type="submit" name="Submit2" value="test">
+these 2 are pretty similar
+
+
+<form class="" action="http://www.wikipedia.org" method="get">
+  <input type="text" name="username" placeholder="username" value="">
+  <input type="password" name="password" placeholder="password" value="">
+  <input type="submit" name="" value="submit">
+</form>

@@ -1,0 +1,36 @@
+
+
+
+#Lindacontent {
+  text-align:center;
+  padding-top: 10%;
+/* better to do % than px so its more responsive */
+}
+
+body {
+  background: url("https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  color: white;
+}
+
+/* This will make the background image stretch across entire vertical page: */
+html {
+  height: 100%;
+}
+
+
+
+h1 {
+  font-size: 5em;
+  font-weight: bold;
+  text-shadow: 0px 5px 3px blue,
+              0px 8px 15px orange;
+                /* X offset, Y offset, blue radius, color */
+}
+
+hr {
+  width: 400px;
+}

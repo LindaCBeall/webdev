@@ -1,0 +1,262 @@
+
+
+/* commenting in CSS */
+
+The General Rule:
+selector {
+  property: value;
+  anotherproperty: value;
+}
+
+example:
+h1 {
+  color: purple;
+  font-size: 56px;
+}
+
+Correct way to Link to Stylesheet:
+/* Correct way is to use link tag to CSS after title: */
+    <link rel="stylesheet" href="aboutMe.css">
+    /* href file should be in same directory */
+
+Style Tag
+/* Can also put styling within html file under <head>, this will override any linked style sheets:
+<style type="text/css">
+  selector {
+    property: value;
+  }
+h1 {
+  color: blue;
+}
+
+li {
+  color: orange;
+}
+</style>
+to put styling within html file ^ */
+
+/* Section */
+Colors///
+Hexidecimal colors - 6 #_ _ _ _ _ _
+Decimal - Base 10 - 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+Hexidecimal Base 16 - 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+1st 2 digits = red #FF0000
+Middle 2 digits = green #
+Last 2 digits = blue
+/* Colors don't "mix" together like if you mixed paint */
+RGB colors - 3 Channels: rgb(Red,Green,Blue)
+Each ranges from 0-255
+color: rgb(0,255,0);
+
+RBGA - same as RGB but with 4th channel for alpha (transparency)
+alpha ranges from 0.0-1.0, 1.0 means fully visible
+
+/* Section */
+Background///
+h1 {
+  background: rgb(255,100,0);
+}
+
+body {
+background: rgb(0,0,0);
+}
+
+body {
+  background: url(http://image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Section */
+Borders///
+3 Parts:
+border-width: 5px;
+border-color: red;
+border-style: solid;
+
+OR
+
+border: 5px solid rgb(100, 255, 0);
+
+/* Section */
+For Individual Cases/Styling:
+HTML:
+id="special1" --can only use once
+class="special2"
+
+/*!!! Can assign multiple classes in html using a space:
+ <td class="vertical top">2</td> assigns to both "vertical" and "top"class */
+
+CSS:
+#special1 {
+  color: yellow;
+}
+.special2 {
+  background: yellow;
+}
+
+/* Section */
+Types of Selectors
+https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+1- Element
+li {
+}
+******************
+For multiple elements:
+h1, h3 {
+This will select all h1 AND all h3
+}
+h1 h3 {
+This will select all h3 NESTED INSIDE h1
+}
+*******************
+2- class
+.hello {
+}
+********************
+3- id
+#hello {
+}
+/* id's always individual to one thing, can't re-use */
+********************
+4- Star
+*
+/* will select everything on page (not recommended) */
+
+5- Descendant Selectors
+li a { /* Will select every anchor tag that is inside a li */
+}
+
+6- Adjacent
+/* Select "siblings" */
+h4 + ul
+/* Without the +, it is all ul's INSIDE h4 */
+/* With the +, it is all ul's ADJACNET to h4 */
+
+7- Attribute
+a[href="http://www.google.com"]{
+  /* Select all anchor tags which link to google */
+}
+input[type="text"]{
+  /* Select all text inputs */
+}
+
+8- nth of type
+ul:nth-of-type(3) {
+  /* Selects 3rd ul (unordered/bullet list) on the page
+  includes every li (line item) for that ul*/
+}
+
+li:nth-of-type(3) {
+  /* Selects the 3rd li (line item) for ALL lists on the page
+  NOT every 3rd item, but THE 3rd item on each list
+  To Select every other item, use nth-of-type(even)*/
+}
+
+/* Section */
+Inheritance & Specificity & Cascade
+  /*When CSS has conflicting styling, specificity prioritizes which one "wins out"*/i
+
+From MDN:
+The following list of selector types increases by specificity:
+1. Type selectors (e.g., h1, li) and pseudo-elements (e.g., ::before).
+/* li a {} is more specific than li {}, but not an order of magnitude like class selector */
+2. Class selectors (e.g., .example), attributes selectors (e.g., [type="radio"]) and pseudo-classes (e.g., :hover).
+3. ID selectors (e.g., #example).
+--Universal selector (*), combinators (+, >, ~, ' ', ||) and negation pseudo-class (:not()) have no effect on specificity. (The selectors declared inside :not() do, however.)
+
+/* End of Introduction to CSS*/
+
+
+/* Intermediate CSS */
+
+/* Styles (text, fonts) */
+
+/* font-family cssfontstack.com*/
+p {
+  font-family: arial; /* can also use quotes, may have to if something like "19 arial" where it begins w/a number*/
+}
+
+
+/* font-size */
+body {
+  font-size: 16px; /* 16px is default if not specified usually */
+}
+h1 {
+  font-size: 5.0em;
+  /*em is a ratio compared to the parent category = 5*body or 5*16 */
+}
+p {
+  font-size: 2.0em; /* 2*body or 2*16 */
+}
+span {
+  font-size: 2.0em;
+}
+/* Use <span> </span> to code separate content without visible separation
+=2*p size because it is nested inside the <p>, so 2*2*16 */
+span {
+  font-size: 2.0em;
+}
+/* rem="root em", 1rem=font size of html, span font size=2*16 */
+
+
+/* font-weight = how thick the lines of letter are */
+p {
+  font-weight: bold;
+  /* normal or from 100-800 in 100 increments (100, 200, 300, etc.)*/
+}
+/* line-height = spacing in b/w line */
+p {
+  line-height: 1.5;
+}
+/* text-align = left, right, or center justified*/
+p {
+  text-align: center;
+}
+/* text-decoration = underline, strikethrough, or overline*/
+p {
+  text-decoration: underline;
+}
+
+
+fonts.google.com
+click to embed code and get:
+<link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@100&display=swap" rel="stylesheet">
+You can select more than one style, it will put in same link and separate with an "&"
+Add embed code to HTML inside <head> and after <title> tag
+
+Also get "CSS rules to specify families"
+Add to css
+h1 {
+  font-family: 'Raleway', sans-serif;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+}
+Can do multiple fonts in files, just specify in CSS which applies to what
+
+
+
+The Box Model - Padding, margin, border, etc
+/* Every element has a "box" around it*/
+content (text, etc) -- blue box
+Padding: between text and Border -- green box
+Margin: between border and outside - add spacing b/w elements -- orange
+
+p {
+
+/*Content - Width and Height*/
+width: 50%;
+/*width defaults to entire width of screen b/c it is a <p>
+Also specify in px, % based on parent element = body in this case*/
+
+
+margin: top right bottom left; /*Shortcut instead of doing margin-top: 10px;...*/
+margin: 10px auto 20px auto; /*will center the element on page*/
+margin: 0 auto; /*sets top & bottom to 0px, centers element left to right*/
+margin: 50px 20px; /*50px top& bottom, 20px left & right*/
+
+
+
+
+}

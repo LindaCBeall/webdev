@@ -18,6 +18,21 @@ Codepen.io for real time HTML + CSS + JS
 <!-- HTML5 boilerplate
 head- style sheets, scripts, JS files - all hidden
 -->
+<div class="">
+  <h1>Things I've Learned</h1>
+      <ol>
+        <li>HTTP Requests</li>
+        <li>IP Address</li>
+        <li>Servers</li>
+        <li>HTML = <strong>Hyper Text Markup Language</li>
+        <li>Boilerplate</li>
+            <ol>
+              <li>Doctype</li>
+              <li>HTML</li>
+              <li>Head</li></ol>
+        </ol>
+</div>
+
 <hr>
 <!-- hr is a page break with line across -->
 
@@ -46,6 +61,7 @@ head- style sheets, scripts, JS files - all hidden
 <span>creates in-line sections</span>
 
 <hr>
+
 
 <h1>Attributes are Property + Value</h1>
 
@@ -100,7 +116,7 @@ defaults to file protocol, if www.google.com will go to Desktop/www.google.com, 
 </table>
 
 <hr>
-<h1>Forms</h1>
+<h1>Forms & Labels</h1>
 3 tags, form, input, and label
 
 <form class="" action="index.html" method="post">
@@ -120,7 +136,16 @@ these 2 are pretty similar
 
 
 <form class="" action="http://www.wikipedia.org" method="get">
+  <label for="username">Username:
   <input type="text" name="username" placeholder="username" value="">
-  <input type="password" name="password" placeholder="password" value="">
+  </label>
+
+Inputs either need to be nested inside label tag or use label id/name
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" placeholder="password" value="">
+
   <input type="submit" name="" value="submit">
+  This form will post info to: https://www.wikipedia.org/?username=test&password=qgfhjf
+  Stores as username=test & password=dskjdfs
 </form>
